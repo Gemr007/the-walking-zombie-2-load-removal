@@ -11,23 +11,11 @@ init
   {
     var wz = mono["WalkingZombie", "CWalkingZombie", 1];
     vars.Helper["LoadingInProgress"] = mono.Make<bool>(wz, "instance", "sceneLoadingController", "LoadingInProgress");
-    vars.Helper["IsShowMissionCompleted"] = mono.Make<bool>(wz, "instance", "configMissionBase", "IsShowMissionCompleted");
     return true;
   });
-
-}
-
-Split
-{
-  IsShowMissionCompleted => isShowMissionCompleted;
 }
 
 isLoading
 {
   return current.LoadingInProgress;
-}
-
-exit
-{
-  timer.IsGameTimePaused = true;
 }
